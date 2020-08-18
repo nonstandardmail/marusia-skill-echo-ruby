@@ -1,0 +1,22 @@
+service: marusia-echo-skill-ruby
+
+frameworkVersion: ">=1.1.0 <2.0.0"
+
+plugins:
+  - serverless-offline
+
+custom:
+  stage: ${opt:stage, self:provider.defaultStage}
+
+provider:
+  name: aws
+  runtime: ruby2.5
+  defaultStage: production
+
+functions:
+  webhook:
+    handler: webhook.webhook
+    events:
+      - http:
+          path: webhook
+          method: post

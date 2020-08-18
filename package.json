@@ -1,0 +1,13 @@
+{
+  "name": "marusia-skill-echo-ruby",
+  "version": "1.0.0",
+  "description": "Example Marusia skill",
+  "scripts": {
+    "start": "sls offline --httpPort=3333",
+    "deploy": "sls deploy --stage=production"
+  },
+  "devDependencies": {
+    "serverless": "^1.78.1",
+    "serverless-offline": "^6.5.0"
+  }
+}
